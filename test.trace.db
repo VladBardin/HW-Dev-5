@@ -1,0 +1,51 @@
+2023-04-23 11:44:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "PROJECT_WORKER" не найден
+Column "PROJECT_WORKER" not found; SQL statement:
+INSERT INTO PROJECT_WORKER
+(PROJECT_ID, PROJECT_WORKER)
+VALUES
+(1, 1),
+(1, 2),
+(2, 2),
+(2, 1),
+(2, 3),
+(3, 5),
+(4, 6),
+(4, 7),
+(4, 8),
+(4, 1),
+(4, 9),
+(5, 9),
+(5, 4),
+(5, 10),
+(6, 8),
+(6, 6),
+(6, 5),
+(7, 3),
+(7, 4),
+(7, 10),
+(8, 8),
+(8, 6),
+(9, 7),
+(10, 6),
+(10, 3); [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.command.CommandList.executeRemaining(CommandList.java:53)
+	at org.h2.command.CommandList.update(CommandList.java:66)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:143)
+	at database.Database.executeUpdate(Database.java:23)
+	at database.DatabasePopulateService.main(DatabasePopulateService.java:13)
