@@ -85,15 +85,15 @@ public class DatabaseQueryService {
         }
         return youngOldWorkerList;
     }
-    public List<MaxSalary> printProjectPrice() throws IOException {
-        List<MaxSalary> maxSalaryList = new ArrayList<>();
+    public List<ProjectPrice> printProjectPrice() throws IOException {
+        List<ProjectPrice> maxSalaryList = new ArrayList<>();
         String sql = String.join("\n", Files.readAllLines(Paths.get(PRINT_PROJECT_PRICES)));
         Database date = new Database();
         try (PreparedStatement st = date.getConnection().prepareStatement(sql);
              ResultSet rs = st.executeQuery()
         ) {
             while (rs.next()) {
-                maxSalaryList.add(new MaxSalary(rs.getInt("PROJECT_ID"), rs.getString("PRICE")));
+                maxSalaryList.add(new ProjectPrice(rs.getInt("PROJECT_ID"), rs.getInt("PRICE")));
             }
         } catch (Exception ex) {
             System.out.println("Connection failed...");

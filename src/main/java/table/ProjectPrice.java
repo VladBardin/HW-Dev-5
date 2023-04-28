@@ -9,10 +9,9 @@ public class ProjectPrice {
     }
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder(" PrPrice = ");
-        sb.append("projectID=").append(prID);
-        sb.append(", price=").append(price);
-        //sb.append(" \n");
+        final StringBuilder sb = new StringBuilder("Project price: ");
+        sb.append("projectID = ").append(prID);
+        sb.append(", price = ").append(price);
         return sb.toString();
     }
 }

@@ -13,11 +13,10 @@ public class YoungOldWorker {
     }
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("YoungOldWorker = ");
-        sb.append("type='").append(type).append('\'');
-        sb.append(", name='").append(name).append('\'');
-        sb.append(", date=").append(date);
-        //sb.append(" \n ");
+        final StringBuilder sb = new StringBuilder("Young/Old worker: ");
+        sb.append("type ='").append(type).append('\'');
+        sb.append(", name ='").append(name).append('\'');
+        sb.append(", date =").append(date);
         return sb.toString();
     }
 }

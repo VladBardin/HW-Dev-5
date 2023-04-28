@@ -9,10 +9,9 @@ public class LongestProject {
     }
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("FindLongestPr = ");
+        final StringBuilder sb = new StringBuilder("Find longest project: ");
         sb.append("id=").append(id);
         sb.append(", duration=").append(duration);
-        //sb.append(" \n");
         return sb.toString();
     }
 }
