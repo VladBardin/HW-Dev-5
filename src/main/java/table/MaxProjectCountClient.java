@@ -9,10 +9,10 @@ public class MaxProjectCountClient {
     }
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder(" MaxProjectCountClient{ ");
+        final StringBuilder sb = new StringBuilder(" MaxProjectCountClient = ");
         sb.append("name='").append(name).append('\'');
         sb.append(", projectCount=").append(projectCount);
-        sb.append("}\n ");
+        //sb.append(" \n ");
         return sb.toString();
     }
 }

@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 public class DatabaseInitService {
     public static final String INIT_DB_SQL_FILE_PATH = "./sql/init_db.sql";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Database date = Database.getInstance();
         try {
             String sqlInit = String.join("\n", Files.readAllLines(Paths.get(INIT_DB_SQL_FILE_PATH)));

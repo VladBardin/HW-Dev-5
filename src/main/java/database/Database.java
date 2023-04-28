@@ -7,10 +7,12 @@ import java.sql.Statement;
 public class Database {
     private static final Database INSTANCE = new Database();
     private Connection connection;
+    String connectionUrl = "jdbc:h2:~/test";
+    String connectionLogin = "sa";
+    String connectionPass = "";
     public Database() {
         try {
-            String connectionUrl = "jdbc:h2:./test";
-            connection = DriverManager.getConnection(connectionUrl);
+            connection = DriverManager.getConnection(connectionUrl, connectionLogin, connectionPass);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

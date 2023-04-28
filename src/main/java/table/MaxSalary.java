@@ -9,10 +9,10 @@ public class MaxSalary {
     }
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("MaxSalary{");
+        final StringBuilder sb = new StringBuilder("MaxSalary = ");
         sb.append(" name='").append(name).append('\'');
         sb.append(", salary=").append(salary);
-        sb.append("} \n ");
+        //sb.append(" \n ");
         return sb.toString();
     }
 }

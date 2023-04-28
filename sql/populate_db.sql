@@ -21,7 +21,7 @@ VALUES
     (4, 'Pan-American InfoBanking'),
     (5, 'NatCom');
 
-    INSERT INTO project
+    INSERT INTO PROJECT
     (ID, CLIENT_ID, START_DATE, FINISH_DATE)
     VALUES
      (1, 1, '2022-12-12', '2028-10-01'),

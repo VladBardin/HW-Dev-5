@@ -9,7 +9,6 @@ import java.sql.SQLException;
 
 public class DatabasePopulateService {
     public static final String POPULATE_DB_SQL_FILE_PATH = "./sql/populate_db.sql";
-
     public static void main(String[] args) {
         Database database = Database.getInstance();
         Connection connection = null;
