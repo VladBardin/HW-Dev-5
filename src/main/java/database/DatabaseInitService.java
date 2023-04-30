@@ -9,7 +9,6 @@ import java.sql.SQLException;
 
 public class DatabaseInitService {
     public static final String INIT_DB_SQL_FILE_PATH = "./sql/init_db.sql";
-
     public static void main(String[] args) throws IOException, SQLException {
         Database db = Database.getInstance();
         try {

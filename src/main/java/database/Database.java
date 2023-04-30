@@ -2,7 +2,6 @@ package database;
 
 import java.sql.*;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Database {
     private static final Database INSTANCE = new Database();
