@@ -20,15 +20,14 @@ public class Database {
     public static Database getInstance() {
         return INSTANCE;
     }
-    public int executeUpdate(String sql) {
-        try (Statement st = connection.createStatement()) {
-            return st.executeUpdate(sql);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return -1;
-        }
-    }
     public Connection getConnection() {
+        try {
+            if (connection.isClosed()) {
+                connection = DriverManager.getConnection(connectionUrl, connectionLogin, connectionPass);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return connection;
     }
     public void close() {
